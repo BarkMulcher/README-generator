@@ -4,7 +4,7 @@ const inquirer = require('inquirer');
 
 // link to README folder
 const generateMarkdown = require('./utils/generateMarkdown');
-// const generateMarkdown = require('./utils/generateMarkdown');
+
 const fileName = 'README.md';
 
 // TODO: Create an array of questions for user input
@@ -95,7 +95,7 @@ const questions = () => {
         },
         {
             type: 'input',
-            name: 'contactemail',
+            name: 'contactEmail',
             message: 'Please enter your email address:',
             when(answers) {
                 return answers.contactchoice === 'Email';
@@ -103,7 +103,7 @@ const questions = () => {
         },
         {
             type: 'input',
-            name: 'contact.phone',
+            name: 'contactPhone',
             message: 'Please enter your phone number:',
             when(answers) {
                 answers.contactchoice === 'Phone';
