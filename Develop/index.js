@@ -87,18 +87,18 @@ const questions = () => {
         // 'when' for entering desired contact info 
         {
             type: 'checkbox',
-            name: 'contact.choice',
-            message: "Choose how you'd like to be contacted",
+            name: 'contactchoice',
+            message: "Choose how you'd like to be contacted:",
             choices: ['Email',
                 'Phone',
                 'GitHub'],
         },
         {
             type: 'input',
-            name: 'contact.email',
+            name: 'contactemail',
             message: 'Please enter your email address:',
             when(answers) {
-                return answers.contactChoice === 'Email';
+                return answers.contactchoice === 'Email';
             },
         },
         {
@@ -106,7 +106,7 @@ const questions = () => {
             name: 'contact.phone',
             message: 'Please enter your phone number:',
             when(answers) {
-                answers.contactChoice === 'Phone';
+                answers.contactchoice === 'Phone';
             },
         },
         {
@@ -114,7 +114,7 @@ const questions = () => {
             name: 'contactGitHub',
             message: 'Please enter your GitHub profile URL:',
             when(answers) {
-                answers.contactChoice === 'GitHub';
+                answers.contactchoice === 'GitHub';
             },
         },
     ]);
