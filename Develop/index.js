@@ -1,17 +1,18 @@
 // TODO: Include packages needed for this application
-const inquirer = require('inquirer');
 const fs = require('fs');
-const util = require('util');
-const generateMarkdown = require('./utils/generateMarkdown');
+const inquirer = require('inquirer');
 
+// link to README folder
+const generateMarkdown = require('./utils/generateMarkdown');
+// const generateMarkdown = require('./utils/generateMarkdown');
+const fileName = 'README.md';
 
 // TODO: Create an array of questions for user input
-
-inquirer
-    .prompt([
+const questions = () => {
+    return inquirer.prompt([
         {
-            type: 'name',
-            name: 'readmeTitle',
+            type: 'input',
+            name: 'title',
             message: 'Give your README a good title:',
             validate: function (answer) {
                 if (!answer.length) {
@@ -36,15 +37,23 @@ inquirer
             message: 'What problems were solved by completing this project?'
         },
         {
+            type: "input",
+            name: "installation",
+            message: "Add installation instructions for your project"
+        },
+        {
             type: 'input',
-            name: 'learning',
-            message: 'What did you learn while creating this project?',
+            name: 'usage',
+            message: 'How do you use this app?',
         },
         {
             type: 'checkbox',
             name: 'languages',
-            message: 'What languages were used to create this project?',
-            choices: ['HTML', 'CSS', 'JavaScript'],
+            message: 'What languages/interfaces were used to create this project?',
+            choices: ['HTML',
+                'CSS',
+                'JavaScript',
+                'Node.JS'],
         },
         {
             type: 'input',
@@ -57,58 +66,85 @@ inquirer
             message: 'What license are you using?',
             choices: ["Apache 2.0",
                 "GPL v2",
-                "WWE",
-                "MIT"],
+                "GPL v3",
+                "MIT",
+                "No License (not recommended)"],
         },
         {
             type: 'confirm',
             name: 'collaborators',
             message: 'Do you have any collaborators?',
-            // create if/else to spur next question
         },
         {
             type: 'input',
             name: 'collabNames',
             message: "Enter your collaborators' information",
+            // create 'when' statement to spur next question
+            when(answers) {
+                return answers.collaborators;
+            } 
         },
-        // make if/else for entering desired contact info below
+        // 'when' for entering desired contact info 
+        {
+            type: 'checkbox',
+            name: 'contact.choice',
+            message: "Choose how you'd like to be contacted",
+            choices: ['Email',
+                'Phone',
+                'GitHub'],
+        },
         {
             type: 'input',
-            name: 'contactEmail',
+            name: 'contact.email',
             message: 'Please enter your email address:',
+            when(answers) {
+                return answers.contactChoice === 'Email';
+            },
         },
         {
             type: 'input',
-            name: 'contactPhone',
+            name: 'contact.phone',
             message: 'Please enter your phone number:',
+            when(answers) {
+                answers.contactChoice === 'Phone';
+            },
         },
         {
             type: 'input',
             name: 'contactGitHub',
             message: 'Please enter your GitHub profile URL:',
-        }
-    ])
-
-    .then((data) => {
+            when(answers) {
+                answers.contactChoice === 'GitHub';
+            },
+        },
+    ]);
+}
 
 // TODO: Create a function to write README file
-writeToFile = (fileName, data) => {
+writeToFile = (data) => {
 
     fs.writeFile(fileName, data, (err) => {
         if (err) {
             return console.log(err);
         } else
             console.log('success');
-    })
+    });
 }
-})
+
 
 // TODO: Create a function to initialize app
 const init = () => {
-    inquirer.prompt()
-        .then((data) => 
-        writeToFile(fileName, generateMarkdown(data)))
-}
+    questions()
+        .then((answers) => {
+            return generateMarkdown(answers);
+        })
+        .then((data) => {
+            return writeToFile(data);
+        })
+        .catch((err) => {
+            console.log(err);
+        })
 
+}
 // Function call to initialize app
 init();
