@@ -10,7 +10,7 @@
   * [Motivation](#motivation)
   * [Inspiration](#inspiration)
   * [Installation](#installation)
-  * [Contributing]{#contributing}
+  * [Contributing](#contributing)
   * [Tests](#Tests)
   * [Usage](#usage)
   * [Technologies Used](#languages)
