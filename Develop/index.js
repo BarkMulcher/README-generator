@@ -1,13 +1,9 @@
-// TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-
-// link to README folder
 const generateMarkdown = require('./utils/generateMarkdown');
 
 const fileName = 'README.md';
 
-// TODO: Create an array of questions for user input
 const questions = () => {
     return inquirer.prompt([
         {
@@ -25,31 +21,36 @@ const questions = () => {
             type: 'input',
             name: 'description',
             message: 'Write a short description for your project:',
+            default: 'A very exciting project!',
         },
         {
             type: 'input',
             name: 'motivation',
-            message: 'What was your motivation for this project?'
+            message: 'What was your motivation for this project?',
+            default: 'Motivational Motivations',
         },
         {
             type: 'input',
-            name: 'projectInspiration',
-            message: 'What problems were solved by completing this project?'
+            name: 'inspiration',
+            message: 'What was your inspiration for this project?',
+            default: 'Problematic Problems',
         },
         {
             type: "input",
             name: "installation",
-            message: "Add installation instructions for your project"
+            message: "Add installation instructions for your project",
+            default: 'do the thing',
         },
         {
             type: 'input',
             name: 'usage',
             message: 'How do you use this app?',
+            default: 'do the thing',
         },
         {
             type: 'checkbox',
             name: 'languages',
-            message: 'What languages/interfaces were used to create this project?',
+            message: 'What languages/technologies were used to create this project?',
             choices: ['HTML',
                 'CSS',
                 'JavaScript',
@@ -79,12 +80,10 @@ const questions = () => {
             type: 'input',
             name: 'collabNames',
             message: "Enter your collaborators' information",
-            // create 'when' statement to spur next question
             when(answers) {
                 return answers.collaborators;
             } 
         },
-        // 'when' for entering desired contact info 
         {
             type: 'checkbox',
             name: 'contactchoice',
@@ -97,33 +96,37 @@ const questions = () => {
             type: 'input',
             name: 'contactEmail',
             message: 'Please enter your email address:',
-            when(answers) {
-                return answers.contactchoice === 'Email';
+            default: ' ',
+            when: (answers) => {
+                return answers.contactchoice.includes('Email')
             },
         },
         {
             type: 'input',
             name: 'contactPhone',
             message: 'Please enter your phone number:',
+            default: ' ',
             when(answers) {
-                answers.contactchoice === 'Phone';
+                return answers.contactchoice.includes('Phone');
             },
         },
         {
             type: 'input',
             name: 'contactGitHub',
             message: 'Please enter your GitHub profile URL:',
+            default: ' ',
             when(answers) {
-                answers.contactchoice === 'GitHub';
+                return answers.contactchoice.includes('GitHub');
             },
         },
-    ]);
+    ])
+
 }
-
-// TODO: Create a function to write README file
+// function to write README file
 writeToFile = (data) => {
-
+    
     fs.writeFile(fileName, data, (err) => {
+      
         if (err) {
             return console.log(err);
         } else
@@ -132,7 +135,7 @@ writeToFile = (data) => {
 }
 
 
-// TODO: Create a function to initialize app
+// function to initialize app
 const init = () => {
     questions()
         .then((answers) => {
@@ -146,5 +149,5 @@ const init = () => {
         })
 
 }
-// Function call to initialize app
+
 init();

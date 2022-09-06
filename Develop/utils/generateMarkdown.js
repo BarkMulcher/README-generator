@@ -101,23 +101,40 @@ function generateMarkdown(data) {
   ${data.description}
 
   ## TABLE OF CONTENTS
+  * [Motivation](#motivation)
+  * [Inspiration](#inspiration)
   * [Installation](#installation)
   * [Usage](#usage)
+  * [Technologies Used](#languages)
   * [Credits](#credits)
   * [License](#license)
   * [Contact](#contact)
   
+  ## Motivation
+  ${data.motivation}
+
+  ## Inspiration
+  ${data.inspiration}
+
   ## Installation
   ${data.installation}
 
   ## Usage
   ${data.usage}
 
+  ## Technologies Used
+  ${data.languages}
+
+  ## Credits
+  ${data.collaborators}
+
   ## License
   This project is licensed under ${data.license}
 
-  ## Credits
-  
+  ## Contact
+  Email: ${data.contactEmail}
+  Phone: ${data.contactPhone}
+  GitHub: ${data.GitHub}
 `;
 }
 
