@@ -95,7 +95,7 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `
   # ${data.title}
-  
+
   ${renderLicenseBadge(data.license)} 
 
   ## Description
@@ -133,9 +133,9 @@ function generateMarkdown(data) {
   This project is licensed under ${data.license}
 
   ## Contact
-  *Email: ${data.contactEmail}
-  *Phone: ${data.contactPhone}
-  *GitHub: ${data.contactGitHub}
+  * Email: ${data.contactEmail}
+  * Phone: ${data.contactPhone}
+  * GitHub: ${data.contactGitHub}
 `;
 }
 

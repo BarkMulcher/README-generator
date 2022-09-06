@@ -1,10 +1,10 @@
 
   # CLI README.md Generator
-  
+
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
   ## Description
-  This is a command-line-operated Readme generator that produces a quality README in markdown format 
+  This is a command-line-operated Readme generator that produces a quality README in markdown format
 
   ## TABLE OF CONTENTS
   * [Motivation](#motivation)
@@ -38,6 +38,6 @@
   This project is licensed under MIT
 
   ## Contact
-  *Email: lucas.c.haskell@gmail.com
-  *Phone: N/A
-  *GitHub: https://github.com/BarkMulcher
+  * Email: lucas.c.haskell@gmail.com
+  * Phone: N/A
+  * GitHub: https://github.com/BarkMulcher
