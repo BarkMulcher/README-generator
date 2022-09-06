@@ -113,7 +113,6 @@ const questions = () => {
             type: 'input',
             name: 'contactGitHub',
             message: 'Please enter your GitHub profile URL:',
-            default: 'https://github.com/',
             when(answers) {
                 return answers.contactchoice.includes('GitHub');
             },

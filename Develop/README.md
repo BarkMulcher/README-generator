@@ -1,6 +1,6 @@
 
   #ok
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+  [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) 
 
   ## Description
   A very exciting project!
@@ -28,15 +28,15 @@
   do the thing
 
   ## Technologies Used
-  JavaScript,Node.JS
+  HTML,CSS,JavaScript,Node.JS
 
   ## Credits
-  undefined
+  Luke
 
   ## License
-  This project is licensed under MIT
+  This project is licensed under Apache 2.0
 
   ## Contact
-  Email: undefined
-  Phone: undefined
-  GitHub: undefined
+  *Email: luke
+  *Phone: ok
+  *GitHub: barkmulcher

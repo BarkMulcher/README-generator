@@ -132,9 +132,9 @@ function generateMarkdown(data) {
   This project is licensed under ${data.license}
 
   ## Contact
-  Email: ${data.contactEmail}
-  Phone: ${data.contactPhone}
-  GitHub: ${data.GitHub}
+  *Email: ${data.contactEmail}
+  *Phone: ${data.contactPhone}
+  *GitHub: ${data.contactGitHub}
 `;
 }
 
