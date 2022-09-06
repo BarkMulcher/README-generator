@@ -1,9 +1,9 @@
 
-  #CLI README.md Generator
+  #ok
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
   ## Description
-  This is a command-line-operated Readme generator that produces a quality README in markdown format and saves it to your working folder.
+  A very exciting project!
 
   ## TABLE OF CONTENTS
   * [Motivation](#motivation)
@@ -16,22 +16,22 @@
   * [Contact](#contact)
   
   ## Motivation
-  My motivation for this project was the repeated re-creation of readmes for my  class projects.
+  Motivational Motivations
 
   ## Inspiration
-  I was inpired by an example given by my instructor.
+  Problematic Problems
 
   ## Installation
-  To install this: clone the repository.
+  do the thing
 
   ## Usage
-  Open a node of the index.js file in your CLI of choice, and follow the prompts. The program will save a high quality readme.md with your input to your working folder.
+  do the thing
 
   ## Technologies Used
   JavaScript,Node.JS
 
   ## Credits
-  false
+  undefined
 
   ## License
   This project is licensed under MIT

@@ -75,10 +75,11 @@ const questions = () => {
             type: 'confirm',
             name: 'collaborators',
             message: 'Do you have any collaborators?',
+            default: false,
         },
         {
             type: 'input',
-            name: 'collabNames',
+            name: 'collabname',
             message: "Enter your collaborators' information",
             when(answers) {
                 return answers.collaborators;
@@ -96,7 +97,6 @@ const questions = () => {
             type: 'input',
             name: 'contactEmail',
             message: 'Please enter your email address:',
-            default: ' ',
             when: (answers) => {
                 return answers.contactchoice.includes('Email')
             },
@@ -105,7 +105,6 @@ const questions = () => {
             type: 'input',
             name: 'contactPhone',
             message: 'Please enter your phone number:',
-            default: ' ',
             when(answers) {
                 return answers.contactchoice.includes('Phone');
             },
@@ -114,7 +113,7 @@ const questions = () => {
             type: 'input',
             name: 'contactGitHub',
             message: 'Please enter your GitHub profile URL:',
-            default: ' ',
+            default: 'https://github.com/',
             when(answers) {
                 return answers.contactchoice.includes('GitHub');
             },
