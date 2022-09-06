@@ -129,6 +129,9 @@ function generateMarkdown(data) {
   ## Credits
   ${data.collabname}
 
+  ## Contributing
+  ${data.contributing}
+
   ## License
   This project is licensed under ${data.license}
 

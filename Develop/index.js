@@ -62,6 +62,18 @@ const questions = () => {
             message: 'Add installation instructions, if applicable:',
         },
         {
+            type: 'input',
+            name: 'contributing',
+            message: 'Tell other how they can contribute',
+            default: 'Contact via information found in the "Contact" section of this README.'
+        },
+        {
+            type: 'input',
+            name: 'tests',
+            message: 'How do you test this project?',
+            default: 'There are no tests for this project',
+        },
+        {
             type: 'list',
             name: 'license',
             message: 'What license are you using?',
