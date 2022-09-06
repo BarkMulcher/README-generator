@@ -1,5 +1,6 @@
 
-  #CLI README.md Generator
+  # CLI README.md Generator
+  
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
   ## Description
@@ -37,6 +38,6 @@
   This project is licensed under MIT
 
   ## Contact
-  *Email: undefined
-  *Phone: undefined
+  *Email: lucas.c.haskell@gmail.com
+  *Phone: N/A
   *GitHub: https://github.com/BarkMulcher
