@@ -1,9 +1,9 @@
 
-  #ok
-  [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) 
+  #CLI README.md Generator
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
   ## Description
-  A very exciting project!
+  This is a command-line-operated Readme generator that produces a quality README in markdown format 
 
   ## TABLE OF CONTENTS
   * [Motivation](#motivation)
@@ -16,27 +16,27 @@
   * [Contact](#contact)
   
   ## Motivation
-  Motivational Motivations
+  My motivation for this project was the repeated re-creation of readmes for my  class projects. 
 
   ## Inspiration
-  Problematic Problems
+  I was inpired by an example given by my instructor.
 
   ## Installation
-  do the thing
+  To install this: clone the repository.
 
   ## Usage
-  do the thing
+  Open a node of the index.js file in your CLI of choice, and follow the prompts. The program will save a high quality readme.md with your input to your working folder.
 
   ## Technologies Used
-  HTML,CSS,JavaScript,Node.JS
+  JavaScript,Node.JS
 
   ## Credits
-  Luke
+  N/A
 
   ## License
-  This project is licensed under Apache 2.0
+  This project is licensed under MIT
 
   ## Contact
-  *Email: luke
-  *Phone: ok
-  *GitHub: barkmulcher
+  *Email: undefined
+  *Phone: undefined
+  *GitHub: https://github.com/BarkMulcher
