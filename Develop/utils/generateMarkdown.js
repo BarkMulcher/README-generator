@@ -105,6 +105,8 @@ function generateMarkdown(data) {
   * [Motivation](#motivation)
   * [Inspiration](#inspiration)
   * [Installation](#installation)
+  * [Contributing]{#contributing}
+  * [Tests](#Tests)
   * [Usage](#usage)
   * [Technologies Used](#languages)
   * [Credits](#credits)
@@ -119,6 +121,12 @@ function generateMarkdown(data) {
 
   ## Installation
   ${data.installation}
+
+  ## Contributing
+  ${data.contributing}
+
+  ## Tests
+  ${data.tests}
 
   ## Usage
   ${data.usage}
