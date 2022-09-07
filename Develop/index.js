@@ -1,5 +1,8 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
+// install chalk for funsies:
+const chalk = require('chalk');
+const log = console.log;
 // reference remote JS file location
 const generateMarkdown = require('./utils/generateMarkdown');
 
@@ -14,7 +17,7 @@ const questions = () => {
             message: 'Give your README a good title:',
             validate: function (answer) {
                 if (!answer.length) {
-                    return "you must enter a value"
+                    return chalk.red.bold.underline("you must enter a value")
                 }
                 return true;
             }
@@ -140,7 +143,7 @@ writeToFile = (data) => {
         if (err) {
             return console.log(err);
         } else
-            console.log('success');
+            console.log((chalk.yellow.bgRed.bold('success')));
     });
 }
 
