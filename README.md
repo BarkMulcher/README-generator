@@ -29,7 +29,7 @@
   To install this: clone the repository.
 
   ## Demonstration
-  [!](https://github.com/BarkMulcher/README-generator/blob/main/mdgeneratorgif.gif)
+  <img src="https://github.com/BarkMulcher/README-generator/blob/main/mdgeneratorgif.gif" />
 
   ## Contributing
   Contact via information found in the "Contact" section of this README.
