@@ -1,9 +1,11 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
+// reference remote JS file location
 const generateMarkdown = require('./utils/generateMarkdown');
 
 const fileName = 'README.md';
 
+// questions
 const questions = () => {
     return inquirer.prompt([
         {
@@ -95,7 +97,7 @@ const questions = () => {
             message: "Enter your collaborators' information",
             when(answers) {
                 return answers.collaborators;
-            } 
+            }
         },
         {
             type: 'checkbox',
@@ -134,9 +136,9 @@ const questions = () => {
 }
 // function to write README file
 writeToFile = (data) => {
-    
+
     fs.writeFile(fileName, data, (err) => {
-      
+
         if (err) {
             return console.log(err);
         } else
