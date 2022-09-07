@@ -102,6 +102,7 @@ function generateMarkdown(data) {
   * [Motivation](#motivation)
   * [Inspiration](#inspiration)
   * [Installation](#installation)
+  * [Demonstration](#demonstration)
   * [Contributing]{#contributing}
   * [Tests](#Tests)
   * [Usage](#usage)
@@ -118,6 +119,9 @@ function generateMarkdown(data) {
 
   ## Installation
   ${data.installation}
+
+  ## Demonstration
+  [!](https://github.com/BarkMulcher/README-generator/blob/main/mdgeneratorgif.gif)
 
   ## Contributing
   ${data.contributing}
