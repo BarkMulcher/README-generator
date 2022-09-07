@@ -41,13 +41,11 @@ const questions = () => {
             type: "input",
             name: "installation",
             message: "Add installation instructions for your project",
-            default: 'do the thing',
         },
         {
             type: 'input',
             name: 'usage',
             message: 'How do you use this app?',
-            default: 'do the thing',
         },
         {
             type: 'checkbox',
